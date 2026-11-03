@@ -1,8 +1,8 @@
 import React from 'react';
 
 export default function FloatingSocials() {
-  const WHATSAPP_NUMBER = "919342146824";
-  const PHONE_NUMBER = "+919342146824";
+  const WHATSAPP_NUMBER = "919486290016";
+  const PHONE_NUMBER = "+919486290016";
   
   const whatsappMessage = encodeURIComponent("Hello! I want to join TLK Unisex Fitness Zone. Please share details.");
   const whatsappUrl = `https://wa.me/${WHATSAPP_NUMBER}?text=${whatsappMessage}`;

@@ -193,7 +193,7 @@ export default function Navbar() {
         }
       `}</style>
 
-      {/* Brand Section with Left Logo and Glowing Text Styling */}
+      {/* Brand Section */}
       <a href="#" className="nav-brand-container">
         <div className="nav-logo-box">
           <img 
@@ -208,32 +208,32 @@ export default function Navbar() {
         </span>
       </a>
 
-      {/* PC & Laptop Desktop Links */}
+      {/* PC & Laptop Desktop Links - Swapped Membership and Reviews */}
       <div className="nav-links-desktop">
         <a href="#">HOME</a>
         <a href="#events-highlights">GYM VIEW</a>
-        <a href="#schedule">REVIEWS</a>
         <a href="#membership">MEMBERSHIP</a>
+        <a href="#schedule">REVIEWS</a>
         <a href="#contact">CONTACT</a>
         <a href="#contact" className="btn-red" style={{ padding: '8px 20px', fontSize: '0.8rem', marginLeft: '12px' }}>
           Join Now
         </a>
       </div>
 
-      {/* Android Extreme Right-Side Corner 3-Lines Hamburger Button */}
+      {/* Mobile Hamburger Button */}
       <button className="hamburger-btn" onClick={toggleMenu} aria-label="Toggle Menu">
         <div style={{ transform: isOpen ? 'rotate(45deg) translate(4px, 4px)' : 'none' }} className="hamburger-line"></div>
         <div style={{ opacity: isOpen ? 0 : 1 }} className="hamburger-line"></div>
         <div style={{ transform: isOpen ? 'rotate(-45deg) translate(4px, -4px)' : 'none' }} className="hamburger-line"></div>
       </button>
 
-      {/* Android Dropdown Menu - Updated Schedule to Reviews */}
+      {/* Android Dropdown Menu - Swapped Membership and Reviews */}
       {isOpen && (
         <div className="mobile-menu">
           <a href="#" onClick={closeMenu}>HOME</a>
           <a href="#events-highlights" onClick={closeMenu}>GYM VIEW</a>
-          <a href="#schedule" onClick={closeMenu}>REVIEWS</a>
           <a href="#membership" onClick={closeMenu}>MEMBERSHIP</a>
+          <a href="#schedule" onClick={closeMenu}>REVIEWS</a>
           <a href="#contact" onClick={closeMenu}>CONTACT</a>
           <a href="#contact" className="btn-red" onClick={closeMenu} style={{ padding: '12px', fontSize: '0.85rem', width: '100%', textAlign: 'center', marginTop: '8px' }}>
             JOIN NOW

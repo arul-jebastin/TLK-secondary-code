@@ -15,7 +15,7 @@ export default function WelcomePopup() {
 
   const handleBookNow = (e) => {
     e.preventDefault();
-    const WHATSAPP_NUMBER = "919342146824";
+    const WHATSAPP_NUMBER = "919486290016";
     const message = encodeURIComponent(`Hello! My Name is ${name || 'Fitness Enthusiast'} and my Phone Number is ${phone || 'Not Provided'}. I want to join TLK Unisex Fitness Zone. Please share membership details.`);
     const whatsappUrl = `https://wa.me/${WHATSAPP_NUMBER}?text=${message}`;
     

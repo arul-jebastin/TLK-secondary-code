@@ -123,8 +123,8 @@ export default function Hero() {
             <a href="#contact" className="btn-red">Start Your Journey &rarr;</a>
             
             {/* Small size centered Call Us button under Start Your Journey */}
-            <a href="tel:+919342146824" className="btn-call-glow-small">
-              <span>📞</span> Call Us: +91 9342146824
+            <a href="tel:+919486290016" className="btn-call-glow-small">
+              <span>📞</span> Call Us: +91 9486290016
             </a>
           </div>
         </div>
