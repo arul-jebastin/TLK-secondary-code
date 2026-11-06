@@ -1,11 +1,17 @@
 import React from 'react';
 
 export default function Footer() {
-  const WHATSAPP_NUMBER = "919342146824";
-  const PHONE_NUMBER = "+919342146824";
-  const EMAIL_ADDRESS = "albertarul1985@gmail.com";
+  const WHATSAPP_NUMBER = "919486290016";
+  const PHONE_NUMBER = "+919486290016";
+  const EMAIL_ADDRESS = "tlkfitness@gmail.com";
   const INSTAGRAM_URL = "https://www.instagram.com/tlk_unisex_fitness_zone?utm_source=ig_web_button_share_sheet&xtok=ZDNlZDc0MzIxNw==";
   const GOOGLE_MAPS_URL = "https://www.google.com/maps/search/?api=1&query=TLK+Unisex+Fitness+Zone";
+
+  // Developer Information Constants
+  const DEV_NAME = "A.ARUL JEBASTIN"; // Replace with Developer Name
+  const DEV_PHONE = "+919342146824";             // Replace with Developer Phone
+  const DEV_WHATSAPP = "919342146824";           // Replace with Developer WhatsApp (country code without +)
+  const DEV_EMAIL = "albertarul1985@gmail.com";     // Replace with Developer Email
 
   return (
     <footer style={{
@@ -22,7 +28,7 @@ export default function Footer() {
           max-width: 1200px;
           margin: 0 auto;
           display: grid;
-          grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+          grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
           gap: 40px;
           padding-bottom: 50px;
           border-bottom: 1px solid #1f1f1f;
@@ -89,11 +95,20 @@ export default function Footer() {
           color: #ffffff;
           text-decoration: none;
         }
+        .static-contact-link:hover {
+          color: #dc2626;
+        }
         .location-link {
           color: #ffffff;
           text-decoration: none;
           font-weight: 700;
           letter-spacing: 0.05em;
+        }
+        .dev-badge {
+          background: #121212;
+          border: 1px solid #262626;
+          border-radius: 8px;
+          padding: 16px;
         }
         .footer-bottom {
           max-width: 1200px;
@@ -107,6 +122,14 @@ export default function Footer() {
           color: #525252;
           font-family: monospace;
         }
+        .dev-bottom-link {
+          color: #a3a3a3;
+          text-decoration: none;
+          margin-left: 6px;
+        }
+        .dev-bottom-link:hover {
+          color: #dc2626;
+        }
         @media (max-width: 768px) {
           .footer-bottom {
             flex-direction: column;
@@ -118,15 +141,11 @@ export default function Footer() {
       <div className="footer-container">
         {/* Col 1: Brand Info */}
         <div className="footer-col">
-          {/* Entire Title in Pure White */}
-          <h3>
-            TLK UNISEX FITNESS ZONE
-          </h3>
+          <h3>TLK UNISEX FITNESS ZONE</h3>
           <p style={{ fontSize: '0.85rem', lineHeight: 1.6, marginBottom: '20px' }}>
             Push your limits, build ultimate strength, and transform your body with professional guidance and top-notch equipment.
           </p>
           
-          {/* Replaced Icon Buttons with Vector SVG Icons */}
           <div style={{ display: 'flex' }}>
             {/* WhatsApp Icon */}
             <a href={`https://wa.me/${WHATSAPP_NUMBER}`} target="_blank" rel="noopener noreferrer" className="footer-social-icon" title="WhatsApp">
@@ -165,11 +184,10 @@ export default function Footer() {
           </ul>
         </div>
 
-        {/* Col 3: Contact Details (Phone, Email, Location 3rd) */}
+        {/* Col 3: Contact Details */}
         <div className="footer-col">
           <h3>Get In Touch</h3>
           
-          {/* Phone Item */}
           <div className="contact-item">
             <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#dc2626" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" style={{ flexShrink: 0 }}>
               <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path>
@@ -177,7 +195,6 @@ export default function Footer() {
             <a href={`tel:${PHONE_NUMBER}`} className="static-contact-link">{PHONE_NUMBER}</a>
           </div>
 
-          {/* Email Item */}
           <div className="contact-item">
             <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#dc2626" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" style={{ flexShrink: 0 }}>
               <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path>
@@ -186,7 +203,6 @@ export default function Footer() {
             <a href={`mailto:${EMAIL_ADDRESS}`} className="static-contact-link" style={{ wordBreak: 'break-all' }}>{EMAIL_ADDRESS}</a>
           </div>
 
-          {/* Location Item (3rd position) */}
           <div className="contact-item">
             <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#dc2626" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" style={{ flexShrink: 0 }}>
               <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path>
@@ -197,12 +213,51 @@ export default function Footer() {
             </a>
           </div>
         </div>
+
+        {/* Col 4: Developer Info */}
+        <div className="footer-col">
+          <h3>Developer</h3>
+          <div className="dev-badge">
+            <p style={{ margin: '0 0 10px 0', fontSize: '0.9rem', fontWeight: '700', color: '#ffffff' }}>
+              {DEV_NAME}
+            </p>
+
+            {/* Dev Phone */}
+            <div className="contact-item" style={{ marginBottom: '8px' }}>
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#dc2626" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" style={{ flexShrink: 0 }}>
+                <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path>
+              </svg>
+              <a href={`tel:${DEV_PHONE}`} className="static-contact-link">{DEV_PHONE}</a>
+            </div>
+
+            {/* Dev Email */}
+            <div className="contact-item" style={{ marginBottom: '8px' }}>
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#dc2626" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" style={{ flexShrink: 0 }}>
+                <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path>
+                <polyline points="22,6 12,13 2,6"></polyline>
+              </svg>
+              <a href={`mailto:${DEV_EMAIL}`} className="static-contact-link" style={{ wordBreak: 'break-all' }}>{DEV_EMAIL}</a>
+            </div>
+
+            {/* Dev WhatsApp */}
+            <div className="contact-item" style={{ marginBottom: 0 }}>
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#dc2626" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" style={{ flexShrink: 0 }}>
+                <path d="M21 11.5a8.38 8.38 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.38 8.38 0 0 1-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 0 1-.9-3.8 8.5 8.5 0 0 1 4.7-7.6 8.38 8.38 0 0 1 3.8-.9h.5a8.48 8.48 0 0 1 8 8v.5z"></path>
+              </svg>
+              <a href={`https://wa.me/${DEV_WHATSAPP}`} target="_blank" rel="noopener noreferrer" className="static-contact-link">
+                WhatsApp
+              </a>
+            </div>
+          </div>
+        </div>
       </div>
 
       {/* Footer Bottom */}
       <div className="footer-bottom">
         <div>© 2026 TLK UNISEX FITNESS ZONE. ALL RIGHTS RESERVED.</div>
-        <div>POWERED BY REACT & VITE</div>
+        <div>
+          DEVELOPED BY <a href={`mailto:${DEV_EMAIL}`} className="dev-bottom-link">{DEV_NAME}</a>
+        </div>
       </div>
     </footer>
   );
