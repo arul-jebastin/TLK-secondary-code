@@ -3,7 +3,7 @@ import Navbar from './components/novbar.jsx';
 import Hero from './components/hero.jsx';
 import EventsAndHighlights from './components/gymview.jsx';
 import Membership from './components/memberships.jsx';
-import Schedule from './components/reviews.jsx';
+import Schedule from './components/reviews.jsx'; // This is your Supabase Reviews component
 import Contact from './components/contact.jsx';
 import FloatingSocials from './components/FloatingSocials.jsx';
 import Footer from './components/footer.jsx';
@@ -19,7 +19,10 @@ export default function App() {
       <Hero />
       <EventsAndHighlights />
       <Membership />
+      
+      {/* Supabase-powered Client Reviews */}
       <Schedule />
+
       <Contact />
       
       {/* Floating Action Buttons */}
